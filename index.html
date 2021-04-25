@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <meta charset="utf-8">
+  <title>레퍼런스_SAMSUNG</title>
+  <!--제이쿼리-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- 스와이퍼, css 파일-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <!--스와이퍼 js-->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!--일반 내 css파일-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- 디렉션 박스 css -->
+  <link rel="stylesheet" type="text/css" href="/asset/css/direction_box.css">
+  <!--폰트어썸-->
+
+  <script src="https://kit.fontawesome.com/684e97b7f2.js" crossorigin="anonymous"></script>
+
+  <script>
+    document.documentElement.className = "js";
+    var supportsCssVars = function () {
+      var e, t = document.createElement("style");
+      return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window
+        .CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+  </script>
+
+
+</head>
+<!--아이콘 모음 sns: 
+  유튜브:<i class="fab fa-youtube"></i> 
+  인스타:<i class="fabfa-instagram"></i> 
+  페이스북:<i class="fab fa-facebook"></i> 
+  카카오톡: 
+  x 버튼: <i class="fas fa-times"></i>
+  화살표 인디케이터 좌:<i
+    class="fas fa-angle-left"></i> 우:<i class="fas fa-angle-right"></i> 화살표
+    인디케이터(백그라운드 원형) 좌:<i class="fas fa-chevron-circle-left"></i> 우:<i class="fas
+    fa-chevron-circle-right"></i> 햄버거 메뉴:<i class="fas fa-bars"></i> 돋보기:<i
+    class="fas fa-search"></i> 눈깔:<i class="fas fa-eye"></i> 카트:<i class="fas
+    fa-shopping-cart"></i> 위치:<i class="fas fa-location-arrow"></i> 장바구니:<i
+    class="fas fa-shopping-bag"></i> 상반신모양: <i class="far fa-user"></i> 상반신모양(색채움):
+    <i class="fas fa-user-alt"></i> 수화기 모양: <i class="fas fa-phone"></i> 하트: <i
+    class="fas fa-heart"></i> 지구본 : <i class="fas fa-globe"></i> 
+    -->
+<!--     
+    문제해결
+
+    z-index 안될때 부모 요소에
+    포지션 릴레티브 주면됨 
+    
+    가로 스크롤 해결
+    overflow-x: hidden;
+    overflow-y:auto; 
+
+    폰트 어썸으로 가상클래스에 넣기
+    .p1::before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    }
+
+  Solid → 900
+Regular, Brands → 400
+Light → 300
+-->
+
+<body>
+  <svg class="hidden">
+  </svg>
+  <main>
+    <div class="frame">
+      <div class="frame__title-wrap">
+        <img src="https://www.samsung.com/sec/static/_images/common/logo_samsung_black.svg"></img>
+        <ul class="na_title">
+          <li><a href="#">신제품</a>
+            <ul class="na_submenu">
+              <!-- 첫번째 서브 메뉴 -->
+              <li><a href="#">모바일</a>
+                <ul class="na_submenu_sub">
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/gg3cYKm/7aa0fc98-b6be-419e-9543-767227e43464.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>Galaxy 21 5G</p>
+                        <span>삼성닷컴에서 중고폰<br> 추가보상 혜택을 받으세요!</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/gg3cYKm/7aa0fc98-b6be-419e-9543-767227e43464.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>Galaxy 21 5G</p>
+                        <span>삼성닷컴에서 중고폰<br> 추가보상 혜택을 받으세요!</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/gg3cYKm/7aa0fc98-b6be-419e-9543-767227e43464.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>Galaxy 21 5G</p>
+                        <span>삼성닷컴에서 중고폰<br> 추가보상 혜택을 받으세요!</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/CspB6YH/3133b80e-5fa4-41cb-a5cf-e5b94ad413cd.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>Galaxy Bugs Pro</p>
+                        <span>삼성닷컴 단독! 애니콜 스페셜<br>커버와 특별한 혜택까지!</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/PFNfL9z/9ea506b6-0cf9-4fca-b4db-2f72159ccb86.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>Galaxy Tap S7</p>
+                        <span>미스틱 네이비 컬러출시<br>삼성탓컴 혜택으로!</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- 두번째 서브 메뉴 -->
+              <li><a href="#">TV</a>
+                <ul class="na_submenu_sub">
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/VVbHx2v/36a17531-a959-43cc-b793-4c2a1ba02d48.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>Crystal UHD 스탠드형</p>
+                        <span>현실감이 느껴지는 화질로 완전히 몰입해보세요.</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/zHnw2h4/321ca431-6a3d-49b3-81fe-bfbb96666c23.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>QLED 4K 스탠드형</p>
+                        <span>숨은 디테일까지 찾아주는 퀀텀 HDR 1500</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/jWTmLrW/d5db2711-67c6-44f5-8fe8-2e0966ad80b9.png" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>Crystal UHD 스탠드형</p>
+                        <span>10억 개의 색상이 담긴 화질로 완전히 몰입해보세요.</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/wdHXYZK/5d0fd295-a546-43aa-9f77-0d3b96bc1145.png" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>QLED 214cm 벽걸이형</p>
+                        <span>번인 걱정 없는 퀀텀 디스플레이 4K</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/smd1gQ1/c05800bb-f414-4b91-8cdf-ff7aec3ea54b.png" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>Neo 8K Infinity 스탠드형</p>
+                        <span>리얼 Full-Screen이 주는 압도적 몰입감 인피니티 스크린</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- 세번째 서브 메뉴 -->
+              <li><a href="#">냉장고</a>
+                <ul class="na_submenu_sub">
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/FDYRY5S/4ccbdf7c-cb30-4d1f-a758-84e22777a387.webp" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 프리스탠딩</p>
+                        <span>하나의 냉장고, 다양한 푸드 케어 맞춤 신선 보관</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/N2TJyfp/2f0956e7-0f1e-43e8-91c6-81f29642a4b3.webp" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 프리스탠딩</p>
+                        <span>맞춤형 조합으로 주방을 나답게 BESPOKE 디자인</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/4NRxgnp/aee46fa4-11fe-4f87-9a4a-b44d36fdf045.webp" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 프리스탠딩</p>
+                        <span>냄새 섞임 걱정 없이 트리플 독립 냉각</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/vD0qCyR/6267a92c-b1b6-401a-b5ff-8093c65b9080.webp" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 프리스탠딩</p>
+                        <span>온도를 일정하게 유지하는 독보적 기술 미세정온</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/yyt56XS/7a006348-f26b-4e16-9552-123e2d75d60a.webp" alt="누끼이미지"
+                        style="margin-top: -20px;">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 프리스탠딩</p>
+                        <span>리얼 Full-Screen이 주는 압도적 몰입감 인피니티 스크린</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- 네번째 서브 메뉴 -->
+              <li><a href="#">세탁기</a>
+                <ul class="na_submenu_sub">
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/mH4TTPy/472d0e55-4e22-4b5c-8582-8340d2c04f8d-1.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>그랑데 세탁기 AI 24 kg</p>
+                        <span>세탁부터 탈수까지 알아서 AI 맞춤</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/TgpB8J6/bc9920d4-232c-495c-8a46-874ddef299b8-1.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>그랑데 세탁기 AI 23 kg</p>
+                        <span>더 섬세하고 똑똑해진 버블워시</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/FKkSmBP/33ff6ff1-6ac1-4a2f-b66a-e8671303d833-1.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>그랑데 세탁기 AI 24 kg</p>
+                        <span>세제없이 깨끗한 통 관리 무세제통</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/NY2Tt8J/28f70ec9-73b9-47a1-8bc2-795ac0b5450c-1.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>그랑데 세탁기 AI 24 kg</p>
+                        <span>더 빠르고 강력해진 특허받은 버블</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/SKC9qK0/2d74ea32-127d-43b5-8e8b-a97c76041fa3-1.png" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>그랑데 세탁기 AI 25 kg</p>
+                        <span>세제없이 깨끗한 통 관리 무세제통</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- 다섯번째 서브 메뉴 -->
+              <li><a href="#">노트북</a>
+                <ul class="na_submenu_sub">
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/TB3c7pq/ca439f23-b690-4ba7-ab9a-19bf221b7f1c.webp" alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>갤럭시 북 Ion2</p>
+                        <span>자연색 그대로 구현 LED 디스플레이</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img
+                        src="https://i.ibb.co/317BDN3/sec-galaxy-book-flex-nt750qcj-kd716-nt750qcj-kd716-thumb-Mercury-Gray-238170963.webp"
+                        alt="누끼이미지">
+                      <div class="na_submenu_sub_desc">
+                        <p>갤럭시 북 알파</p>
+                        <span>터치 패드로 간편한 충전 무선 배터리 공유</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/SnwnHDs/d27b8feb-a24b-4618-957d-b062a205dd5d.webp" alt="누끼이미지"
+                        style="margin-top: -20px width:130%;;">
+                      <div class="na_submenu_sub_desc">
+                        <p>갤럭시 북 Flex2</p>
+                        <span>제스처 인식으로 더욱 진화된 스마트 S펜</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/zHmfgyn/d3e147ca-95e2-460e-9f5b-7daa480ef858.webp" alt="누끼이미지"
+                        style="margin-top: -20px width:130%;;">
+                      <div class="na_submenu_sub_desc">
+                        <p>갤럭시 북 Flex2</p>
+                        <span>자연색 그대로 구현하는 QLED 디스플레이</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/wRPG0vj/2070b895-0436-415a-a2e2-0b2d71e0e51c.webp" alt="누끼이미지"
+                        style="margin-top: -20px; width:130%;">
+                      <div class="na_submenu_sub_desc">
+                        <p>갤럭시 북 Flex2</p>
+                        <span>귀에 쏙 들어가는 오픈형 디자인, 편안한 착용감</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- 여섯번째 서브 메뉴 -->
+              <li><a href="#">건조기</a>
+                <ul class="na_submenu_sub">
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/grq4zNG/9d73527e-9471-4d4e-9a2e-a620abf9.png" alt="누끼이미지"
+                        style="margin-top:10px; width:70%">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 에어드레서</p>
+                        <span>삼성카드 5%</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/7W1M5wq/77e99028-aef4-4b4e-b197-381c109f.png" alt="누끼이미지"
+                        style="margin-top:10px; width:70%">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 에어드레서</p>
+                        <span>진동/소음 걱정 없이 공간에 딱!</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/qdZMvpr/5900ca4b-a15c-4b03-bef0-2c7bd1f4.png" alt="누끼이미지"
+                        style="margin-top:10px; width:70%">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 에어드레서</p>
+                        <span>맞춤 청정 AI 의류청정솔루션</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/1GgStvD/2e0f7836-2666-4062-a722-63ab7471.png" alt="누끼이미지"
+                        style="margin-top:10px; width:70%">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 에어드레서</p>
+                        <span>건조와 구김 제거 한 번에 AI 건조</span>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <img src="https://i.ibb.co/Sr4gZGs/a5393ac8-3cef-4300-8cfb-9c5d0094.png" alt="누끼이미지"
+                        style="margin-top:10px; width:70%">
+                      <div class="na_submenu_sub_desc">
+                        <p>BESPOKE 에어드레서</p>
+                        <span>바이러스와 세균까지 효과적으로</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+
+            </ul>
+          </li>
+          <li><a href="#">기획전</a>
+            <ul class="na_submenu">
+              <!-- 첫번째 서브 메뉴 -->
+              <li><a href="#">모두보기</a>
+              </li>
+              <li><a href="#">삼성닷컴 단독</a>
+              </li>
+              <li><a href="#">웨딩</a>
+              </li>
+              <li><a href="#">갤럭시캠퍼스</a>
+              </li>
+              <li><a href="#">아울렛</a>
+              </li>
+              <li><a href="#">혜택존</a>
+              </li>
+
+
+
+            </ul>
+          </li>
+          <li><a href="#">스토리</a></li>
+          <li><a href="#">고객 서비스</a></li>
+          <li><a href="#">멤버십</a></li>
+          <li><a href="#">디지털프라자</a></li>
+          <li><a href="#">비즈니스</a></li>
+          <li><a href="#">사회공헌</a></li>
+        </ul>
+        <div class="nav">
+          <div class="nav__counter">
+            <span>0</span>/<span>0</span>
+          </div>
+          <div class="nav__arrows">
+            <button class="nav__arrow nav__arrow--prev" data-hover>
+              <svg class="icon icon--rotated icon--nav">
+                <use xlink:href="#icon-nav"></use>
+              </svg>
+            </button>
+            <button class="nav__arrow nav__arrow--next" data-hover>
+              <svg class="icon icon--nav">
+                <use xlink:href="#icon-nav"></use>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/frame-->
+    <div class="slideshow" style="background:rgb(255, 255, 255);">
+
+      <div class="slide slide--layout-1" data-contentcolor="#e88655">
+
+        <div class="slide__figure slide__figure--main" data-sort="3">
+          <div class="slide__figure-img"
+            style="background:url(https://images.samsung.com/kdp/cms_contents/113341/b334764b-ec27-438d-b6ad-5c7ec75c21dc.png?$ORIGIN_JPG$); background-size: cover;">
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box"
+          style="background:rgba(255, 0, 0, 0); border-right:2px dotted black;" data-sort="2">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/3022/3022600.svg?token=exp=1619355255~hmac=2f618197f7835719fea0827f4266690c"
+              alt="">
+            <h3>Galaxy Family Festa</h3>
+            <p>소중한 사람에게 특별한 갤럭시를 선물하세요<br>선물하는 사람도 받는 사람도 경품 혜택 증정</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box"
+          style="background:rgba(0, 0, 255, 0); border-right:2px dotted black;" data-sort="4">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/864/864102.svg?token=exp=1619355626~hmac=c297c732a25899eaa8085ba495409713"
+              alt="">
+            <h3>Galaxy College Store</h3>
+            <p>대학생,대학원생과 대학 교원, 교직원을 위한<br>교육 할인 스토어를 만나보세요!</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box"
+          style="background:rgba(0, 128, 0, 0); border-right:2px dotted black;" data-sort="1">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/4149/4149691.svg?token=exp=1619355726~hmac=0ca38ce516cd71d3ff678c40cfbc463a"
+              alt="">
+            <h3>Online-Experience</h3>
+            <p>각양각색 집콕 스토리를 지금 바로 확인 해보세요!</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box"
+          style="background:rgba(255, 255, 0, 0); border-right:2px dotted black;" data-sort="1">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/1179/1179120.svg?token=exp=1619355834~hmac=5f13cc1dd7990e0ffc32399510e0f3cf"
+              alt="">
+            <h3>The Premiere</h3>
+            <p>영화관보다 더 영화관처럼<br>4K프리미어 빔으로 누리는 시네마</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <h2 class="slide__title">Galaxy</h2>
+        <div class="slide__text slide__text--right">
+          <p class="slide__text-meta"></p>
+          <p class="slide__text-description"></p>
+          <a class="slide__text-link" data-hover href="#"></a>
+        </div>
+        <button class="slide__back" data-hover style="display: none;">
+          <svg class="icon icon--back">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </button>
+        <div class="slide__content">
+          <p> </p>
+        </div>
+
+      </div>
+      <div class="slide slide--layout-2" data-contentcolor="#7dd2dc">
+
+        <div class="slide__figure slide__figure--main" data-sort="1">
+          <div class="slide__figure-img"
+            style="background:url(https://images.samsung.com/kdp/cms_contents/114275/0d83f78a-3d17-47cc-9088-893b7cbd4b51.jpg?$ORIGIN_JPG$); background-size: cover; background-position: center center;">
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" style="background:rgba(255, 0, 0, 0); border:1px dotted black;"
+          data-sort="4">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/3022/3022600.svg?token=exp=1619355255~hmac=2f618197f7835719fea0827f4266690c"
+              alt="">
+            <h3>Galaxy Family Festa</h3>
+            <p>소중한 사람에게 특별한 갤럭시를 선물하세요<br>선물하는 사람도 받는 사람도 경품 혜택 증정</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" style="background:rgba(255, 0, 0, 0); border:1px dotted black;"
+          data-sort=1">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/864/864102.svg?token=exp=1619355626~hmac=c297c732a25899eaa8085ba495409713"
+              alt="">
+            <h3>Galaxy College Store</h3>
+            <p>대학생,대학원생과 대학 교원, 교직원을 위한<br>교육 할인 스토어를 만나보세요!</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" style="background:rgba(255, 0, 0, 0); border:1px dotted black;"
+          data-sort="3">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/4149/4149691.svg?token=exp=1619355726~hmac=0ca38ce516cd71d3ff678c40cfbc463a"
+              alt="">
+            <h3>Online-Experience</h3>
+            <p>각양각색 집콕 스토리를 지금 바로 확인 해보세요!</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" style="background:rgba(255, 255, 0, 0); border:1px dotted black;"
+          data-sort="2">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/1179/1179120.svg?token=exp=1619355834~hmac=5f13cc1dd7990e0ffc32399510e0f3cf"
+              alt="">
+            <h3>The Premiere</h3>
+            <p>영화관보다 더 영화관처럼<br>4K프리미어 빔으로 누리는 시네마</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <h2 class="slide__title">Scabulous</h2>
+        </h2>
+        <div class="slide__text">
+          <p class="slide__text-meta"></p>
+          <p class="slide__text-description"></p>
+          <a class="slide__text-link" data-hover href="#"></a>
+        </div>
+        <button class="slide__back" data-hover>
+          <svg class="icon icon--back">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </button>
+        <div class="slide__content">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="slide slide--layout-3" data-contentcolor="#dc9d7f">
+        <div class="slide__figure slide__figure--main" data-sort="1">
+          <div class="slide__figure-img"
+            style="background:url(https://images.samsung.com/kdp/cms_contents/104177/7df56429-10bc-4f48-84e3-dc6aa7ffff99.jpg); background-size: cover; background-position: center center;">
+
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" data-sort="2"
+          style="background:rgb(0, 38, 255,0); border:1px dotted black;">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/3022/3022600.svg?token=exp=1619355255~hmac=2f618197f7835719fea0827f4266690c"
+              alt="">
+            <h3>Galaxy Family Festa</h3>
+            <p>소중한 사람에게 특별한 갤럭시를 선물하세요<br>선물하는 사람도 받는 사람도 경품 혜택 증정</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" data-sort="3"
+          style="background:rgb(0, 255, 13,0); border:1px dotted black;">
+          <div class="slide__figure-img">
+
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/1179/1179120.svg?token=exp=1619355834~hmac=5f13cc1dd7990e0ffc32399510e0f3cf"
+              alt="">
+            <h3>The Premiere</h3>
+            <p>영화관보다 더 영화관처럼<br>4K프리미어 빔으로 누리는 시네마</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" data-sort="4"
+          style="background:rgba(255, 255, 0, 0); border:1px dotted black;">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/864/864102.svg?token=exp=1619355626~hmac=c297c732a25899eaa8085ba495409713"
+              alt="">
+            <h3>Galaxy College Store</h3>
+            <p>대학생,대학원생과 대학 교원, 교직원을 위한<br>교육 할인 스토어를 만나보세요!</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <div class="slide__figure slide__figure--box" data-sort="4"
+          style="background:rgba(255, 255, 0, 0); border:1px dotted black;">
+          <div class="slide__figure-img">
+            <img
+              src="https://www.flaticon.com/svg/vstatic/svg/4149/4149691.svg?token=exp=1619355726~hmac=0ca38ce516cd71d3ff678c40cfbc463a"
+              alt="">
+            <h3>Online-Experience</h3>
+            <p>각양각색 집콕 스토리를 지금 바로 확인 해보세요!</p>
+            <a href="#">더보기</a>
+          </div>
+        </div>
+
+        <h2 class="slide__title">Zenosyne</h2>
+        </h2>
+        <div class="slide__text">
+          <p class="slide__text-meta"></p>
+          <p class="slide__text-description"></p>
+          <a class="slide__text-link" data-hover href="#"></a>
+        </div>
+        <button class="slide__back" data-hover>
+          <svg class="icon icon--back">
+            <use xlink:href="#icon-arrow"></use>
+          </svg>
+        </button>
+        <div class="slide__content">
+          <p></p>
+        </div>
+      </div>
+
+    </div>
+    <!--/slideshow-->
+    <div class="cursor">
+      <div class="cursor__inner cursor__inner--circle"></div>
+      <div class="cursor__inner cursor__inner--dot"></div>
+    </div>
+  </main>
+
+
+
+
+  <article class="recommended_product">
+    <section class="recommended_product_wrap">
+      <div class="recommended_product_title">
+        <h3>BEST SELLER</h3>
+        <button>GO to SHop-></button>
+      </div>
+      <div class="recommended_product_top">
+        <div class="recommended_product_top_left">
+          <p>세기로운<br>
+            베스트 셀러<br>
+            아이템!</p>
+          <span>Smart한 사용자를 위한 <br>브랜드 핫템을 소개합니다</span>
+        </div>
+        <div class="recommended_product_top_right">
+          <div class="swiper-container sw1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://i.ibb.co/3mjH8sX/ezgif-2-c64a07e3bd54.gif" alt="" style="width:100%; height: 85%;">
+                <div class="mobile_img">
+                  <img src="https://i.ibb.co/jf1cdT0/image.png" alt="">
+                </div>
+                <div class="sw1_text_wrap">
+                  <span>MOBILE &nbsp;</span><span>|&nbsp;&nbsp;</span><span>갤럭시 S21 Ultra 5G 자급제</span>
+                  <p>혜택가 <span style="font-weight: 600;">1,452,000 원</span><span
+                      style="font-size: 2rem; color:red;">&nbsp;&nbsp;&nbsp;2%</span></p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://i.ibb.co/T8R6DCw/1.png" alt="">
+                <div class="sw1_text_wrap">
+                  <span>TV &nbsp;</span><span>|&nbsp;&nbsp;</span><span>Crystal UHD 189 cm 스탠드형</span>
+                  <p>혜택가 <span style="font-weight: 600;">1,999,000 원</span><span
+                      style="font-size: 2rem; color:red;">&nbsp;&nbsp;&nbsp;5%</span></p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://i.ibb.co/McQX4Jw/image.png" alt="">
+                <div class="sw1_text_wrap">
+                  <span>
+                    Refrigerator &nbsp;</span><span>|&nbsp;&nbsp;</span><span>BESPOKE 냉장고 4도어 프리스탠딩 868 L</span>
+                  <p>혜택가 <span style="font-weight: 600;">2,750,000 원</span><span
+                      style="font-size: 2rem; color:red;">&nbsp;&nbsp;&nbsp;8%</span></p>
+                </div>
+              </div>
+
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="recommended_product_bottom">
+        <div class="recommended_product_bottom_left">
+          <div class="swiper-container sw2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://images.samsung.com/kdp/event/30268/aba20403-0e24-43a4-aff2-1207963c3520.PNG"
+                  alt="이벤트 이미지">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="https://images.samsung.com/kdp/event/30269/c0b6fef7-c3a5-48bf-8607-ca555f5448e7.jpg"
+                  alt="핸드폰 이벤트 이미지">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="https://images.samsung.com/kdp/event/30265/321f1b9c-bc40-4565-8f15-5996716ef18b.PNG"
+                  alt="이벤트 이미지">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="https://images.samsung.com/kdp/event/30298/a807ca19-884f-452a-b729-2a1992fb633a.jpg"
+                  alt="이벤트 이미지">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="https://images.samsung.com/kdp/event/30291/28d04b61-31cb-4e9b-ade3-ddbbc525fe88.jpg"
+                  alt="이벤트 이미지">
+              </div>
+
+              <div class="swiper-slide">
+                <img src="https://images.samsung.com/kdp/event/30278/2f642009-90e0-4aee-92fb-156d51cbc294.jpg"
+                  alt="이벤트 이미지">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommended_product_bottom_right">
+          <div class="swiper-container sw3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="recommended_product_bottom_right_text">
+                  <h3>Odyssey G7 Gaming Monitor 80 cm</h3>
+                  <p>80 cm QHD 해상도 최초의 240 Hz 주사율</p>
+                  <p><span class="span_tho" style="font-size: 0.5rem;">930,000원</span><br>
+                    900,000&nbsp;원<span style="font-size: 1.2rem; color:red;">&nbsp;&nbsp;5%</span> </p>
+                </div>
+                <div class="recommended_product_bottom_right_img">
+                  <img src="https://i.ibb.co/vzK2yXF/sec-gaming-lc32g74tqskxkr-lc32g74tqskxkr-frontblack-238213849.png"
+                    alt="">
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="recommended_product_bottom_right_text">
+                  <h3>Odyssey Ultra Wide Monitor</h3>
+                  <p>듀얼 QHD 디스플레이(DQHD)</p>
+                  <p><span class="span_tho" style="font-size: 0.5rem;">1,960,000원</span><br>
+                    1,900,000&nbsp;원<span style="font-size: 1.2rem; color:red;">&nbsp;&nbsp;5%</span> </p>
+                </div>
+                <div class="recommended_product_bottom_right_img" style="right:2%">
+                  <img src="https://i.ibb.co/xGNG8fj/sec-gaming-lc49g95tsskxkr-lc49g95tsskxkr-frontwhite-256670030.png"
+                    alt="">
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="recommended_product_bottom_right_text">
+                  <h3>BESPOKE 제트 210W</h3>
+                  <p>깔끔하고 빠르게 비우며 동시에 충전하는 일체형 청정스테이션</p>
+                  <p><span class="span_tho" style="font-size: 0.5rem;">1,550,000원</span><br>
+                    1,399,000&nbsp;원<span style="font-size: 1.2rem; color:red;">&nbsp;&nbsp;5%</span> </p>
+                </div>
+                <div class="recommended_product_bottom_right_img">
+                  <img src="https://i.ibb.co/jg9ysjy/ec081962-bb9b-49aa-90b4-bc8e1d614f61.png" alt="">
+                </div>
+              </div>
+
+
+
+              <div class="swiper-slide">
+                <div class="recommended_product_bottom_right_text">
+                  <h3>제트 200W + 청정스테이션 패키지</h3>
+                  <p>대 200 W 초강력 흡입력으로 미세먼지까지 강력하게 흡입합니다.</p>
+                  <p><span class="span_tho" style="font-size: 0.5rem;">1,550,000원</span><br>
+                    1,248,000&nbsp;원<span style="font-size: 1.2rem; color:red;">&nbsp;&nbsp;5%</span> </p>
+                </div>
+                <div class="recommended_product_bottom_right_img">
+                  <img src="https://i.ibb.co/qmKQ8Rg/4f6c9166-f067-4dad-adc7-b5f36a257223.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="recommended_product_bottom_right_text">
+                  <h3>BESPOKE 무풍에어컨 무풍갤러리 청정</h3>
+                  <p>가구 같은 가전 갤러리 디자인</p>
+                  <p><span class="span_tho" style="font-size: 0.5rem;">3,810,000원</span><br>
+                    3,545,000&nbsp;원<span style="font-size: 1.2rem; color:red;">&nbsp;&nbsp;4%</span> </p>
+                </div>
+                <div class="recommended_product_bottom_right_img">
+                  <img src="https://i.ibb.co/vVVMwPT/Any-Conv-com-a5ebedc5-f26a-42bd-8a3d-8834dcd2246a.png" alt="">
+                </div>
+              </div>
+
+
+
+              <div class="swiper-slide">
+                <div class="recommended_product_bottom_right_text">
+                  <h3>AI 올인원 세탁기 + 건조기 세트</h3>
+                  <p>오염도에 따라 세제와 헹굼을 알아서 AI 맞춤세탁</p>
+                  <p><span class="span_tho" style="font-size: 0.5rem;">3,458,000원</span><br>
+                    2,249,000&nbsp;원<span style="font-size: 1.2rem; color:red;">&nbsp;&nbsp;15%</span> </p>
+                </div>
+                <div class="recommended_product_bottom_right_img">
+                  <img src="https://i.ibb.co/MDtJ9bB/Any-Conv-com-a189da56-d5bf-459b-be17-0d9264e94239.png" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <article class="sns_grid">
+    <div class="sns_grid_title">
+      <h2>What's Happening Samsung"</h2>
+      <p>트랜드</p>
+      <button>더 알아보기</button>
+    </div>
+    <section class="sns_grid container">
+
+      <!-- 1번째 상자 -->
+      <div class="item">
+        <h4>#리얼리뷰</h4>
+        <span>전문가가<br> 직접 사용해 본<br> 생생한 상품 리뷰</span>
+        <button>버어튼</button>
+      </div>
+      <!-- 2번째 상자 -->
+      <div class="item">
+        <img src="https://i.ibb.co/pWtN4m7/5acdf6a1-3023-4553-9055-f418bc65bc45.png" alt="">
+        <h3>VIDEO</h3>
+        <h5>한눈에 보는 제품영상</h5>
+        <p>마음에드는 제품을 고르세요!</p>
+        <button>제품보기</button>
+      </div>
+      <!-- 3번째 상자 -->
+      <div class="item">
+        <h4>#리얼리뷰</h4>
+        <span>전문가가<br> 직접 사용해 본<br> 생생한 상품 리뷰</span>
+        <button>버어튼</button>
+      </div>
+      <!-- 4번째 상자 -->
+      <div class="item">
+        <h4>#리얼리뷰</h4>
+        <span>전문가가<br> 직접 사용해 본<br> 생생한 상품 리뷰</span>
+        <button>버어튼</button>
+      </div>
+      <!-- 5번째 상자 -->
+      <div class="item">
+        <img src="https://i.ibb.co/3pXKQSQ/e461fb3e-12cf-4640-8efc-78459c825abf.png" alt="">
+        <h3>VIDEO</h3>
+        <h5>JOIN THE BESPOKE - 컬러 편</h5>
+        <p>비스포크 선정 8가지 올해의 컬러부터 360개 프리즘 컬러까지 비스포크로 트렌드의 주인공이 되세요.</p>
+        <button>제품보기</button>
+
+      </div>
+      <!-- 6번째 상자 -->
+      <div class="item">
+        <img src="https://i.ibb.co/tDZc1J9/ba6180a9-468a-4166-9760-1ca2edb59e42.png" alt="">
+        <h3>EXPERIENCE</h3>
+        <h5>Galaxy S21번지 집콕 빌리지</h5>
+        <p>Galaxy S21 5G와의 각양각색 집콕 라이프. 지금 집콕 빌리지로 당신을 초대합니다.</p>
+        <button>제품보기</button>
+
+      </div>
+      <!-- 7번째 상자 -->
+      <div class="item">
+        <img src="https://i.ibb.co/27McLF1/44c6b126-eb0f-4b25-bb7e-216a33d9aa02.png" alt="">
+        <h3>VIDEO</h3>
+        <h5>알아서 해주세요 편</h5>
+        <p>그랑데 AI를 경험해보세요.</p>
+        <button>제품보기</button>
+      </div>
+      <!-- 8번째 상자 -->
+      <div class="item">
+        <img src="https://i.ibb.co/pwftDqP/923136708001-6173165795001-6171167484001-vs.png" alt="">
+        <h3>BESPOKE 인덕션</h3>
+        <h5>제품 소개 영상</h5>
+        <p>BESPOKE 인덕션 소개영상</p>
+        <button>제품보기</button>
+      </div>
+      <!-- 9번째 상자 -->
+      <div class="item">
+        <h4>#리얼리뷰</h4>
+        <span>전문가가<br> 직접 사용해 본<br> 생생한 상품 리뷰</span>
+        <button>버어튼</button>
+      </div>
+      <!-- 10번째 상자 -->
+      <div class="item">
+        <img src="https://i.ibb.co/Vt162gW/54ef82f0-9267-4518-90d3-203a295fa1a7.png" alt="">
+        <h3>SUPPORT</h3>
+        <h5>매장 상담 예약</h5>
+        <p>맞춤 상담을 예약하고 삼성전자가 제안하는 라이프스타일을 직접 체험해보세요.</p>
+        <button>제품보기</button>
+
+      </div>
+      <!-- 11번째 상자 -->
+      <div class="item">
+        <img src="https://i.ibb.co/fNkHBZL/ezgif-com-gif-maker.png" alt="">
+        <h3>Galaxy S2</h3>
+        <h5>Music Stage</h5>
+        <p>이날치 X 릴보이</p>
+        <button>제품보기</button>
+      </div>
+      <!-- 12번째 상자 -->
+      <div class="item">
+        <h4>#리얼리뷰</h4>
+        <span>전문가가<br> 직접 사용해 본<br> 생생한 상품 리뷰</span>
+        <button>버어튼</button>
+      </div>
+
+
+    </section>
+
+    <section class="empty_section"></section>
+  </article>
+
+  <article class="story">
+    <section class="story_top">
+      <div class="story_top_text">
+        <div class="story_top_text_top">
+          <h3>STORY</h3>
+          <h4>스마트하게 사는 새로운 방법을 알아보세요.</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="story_middle">
+      <div class="story_middle_box_wrap">
+        <div class="story_middle_first_box">
+          <div>
+            <h4>스마트폰,<br> 영화를 찍다</h4>
+          </div>
+        </div>
+
+        <div class="story_middle_second_box">
+          <div>
+            <h4>팬들을 위한,<br>새로운 스마트폰</h4>
+          </div>
+        </div>
+        <div class="story_middle_third_box">
+          <div>
+            <h4>영감이 될,<br> 여성들의 이야기</h4>
+          </div>
+        </div>
+        <div class="story_middle_fourth_box">
+          <div>
+            <h4>Unbox & Discover</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="story_bottom">
+      <div class="story_bottom_title">
+        <h1 class="tet_grdi">Better Nomal</h1>
+        <h1>For ALL</h1>
+      </div>
+
+      <div class="story_bottom_desc">
+        <div>
+          <p>‘경영이념, 핵심가치, 경영원칙’의 가치체계를 경영의 나침반으로 삼고,<br> 인재와 기술을 바탕으로 최고의 제품과 서비스를
+            창출하여<br>인류사회에 공헌하는 것을 궁극적인 목표로 삼고 있습니다.</p>
+        </div>
+        <div>
+          <button>회사소개</button>
+          <button>Business Location</button>
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+  <article class="select_container">
+    <ul>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/493/493881.svg?token=exp=1619248981~hmac=231212d9b2b6894c22d364170afd1294"
+            alt="">
+          <h3>Trade-In</h3>
+          <p>중고폰 추가 보상 프로그램</p>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/999/999735.svg?token=exp=1619248959~hmac=1717ac61267a5ba6c0f6dca987a4602c"
+            alt="">
+          <h3>Store</h3>
+          <p>갤럭시 캠퍼스 스토어</p>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/868/868059.svg?token=exp=1619248944~hmac=db79dc3ebcb10559e8538b4b28b3d89a"
+            alt="">
+          <h3>Wedding</h3>
+          <p>웨딩 | 신혼샵</p>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/125/125768.svg?token=exp=1619248925~hmac=f2164f4366a3969696beb82a19633da3"
+            alt="">
+          <h3>Recommend</h3>
+          <p>추천모델</p>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/843/843642.svg?token=exp=1619248876~hmac=0696828c5373021c85e0f80e0760c4a1"
+            alt="">
+          <h3>More Point</h3>
+          <p>2개품목 이상 구매시 추가 포인트</p>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/879/879859.svg?token=exp=1619248855~hmac=35e1659b1b783bfb8547419194917236"
+            alt="">
+          <h3>Outlet</h3>
+          <p>인기가전을 특별한 가격에</p>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/837/837928.svg?token=exp=1619248811~hmac=21330e326e96bb4e55f180ed332df32e"
+            alt="">
+          <h3>Customer</h3>
+          <p>무엇을 도와 드릴까요?</p>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="normal">
+
+        </a>
+        <div class="info">
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/1/1078.svg?token=exp=1619248190~hmac=47b9eaafdd702e59da0fe78fa2e6fdc5"
+            alt="">
+          <h3>Reservation</h3>
+          <p>맞춤 상담 예약 서비스</p>
+        </div>
+      </li>
+
+    </ul>
+  </article>
+
+  <article class="customer">
+    <h2>고객지원</h2>
+    <div class="customer_wrap">
+
+      <section class="customer_module">
+        <div>
+          <h2>제품 정보</h2>
+          <span>제품별 정보 제공<br>
+            제품의 정보를 더욱 손쉽게</span>
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/888/888034.svg?token=exp=1619329914~hmac=d9b6b736e2c2b5d2bb53fe424618fff8"
+            alt="">
+        </div>
+        <div>
+          <h2>더 안전해진 삼성 계정</h2>
+          <span>비밀번호로 한 번, 2단계 인증으로 한번 더!
+            삼성 계정에 안전하게 로그인하세요.</span>
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/1161/1161490.svg?token=exp=1619330327~hmac=126f045bf1ba23174d386c1514217880"
+            alt="">
+        </div>
+        <div>
+          <h2>워런티</h2>
+          <span>제품별 보증 기간 및 내용 제공</span>
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/1104/1104259.svg?token=exp=1619330405~hmac=b70827fa0443fd3a959735835dcbfe98"
+            alt="">
+        </div>
+        <div>
+          <h2>삼성멤버스 커뮤니티</h2>
+          <span>다른 갤럭시 사용자들의 스마트폰 활용법, 리뷰를 둘러보고,
+            당신의 아이디어도 공유하세요.</span>
+          <img
+            src="https://www.flaticon.com/svg/vstatic/svg/3010/3010762.svg?token=exp=1619330470~hmac=964ab652de18705fe8e93d925f3e7f60"
+            alt="">
+        </div>
+      </section>
+      <section class="customer_tabl">
+        <div class="customer_tabl_lft">
+          <strong>공지사항</strong>
+          <ul>
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  25
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <span class="import">중요!</span>
+                  <a href="#">
+                    <span class="text_short">유럽식 송출방식이 적용된 2013~2016년형 당사 UHD TV를 구매하신 고객님께서는
+                      2017년 5월 31일 개막된 지상파 UHD 방송의 직접 수신을 위해서 별도의 지상파 UHD 수신 키트가 필요합니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  13
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <a href="#">
+                    <span class="text_short">운영 정책상 MirrorLink 서비스에 대한 지원이 중단될 예정으로, 다음과 같이 안내 드리오니 참고하시기 바랍니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  02
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <a href="#">
+                    <span class="text_short">최고의 고객 만족을 위해 올바른 갤럭시 워치/핏 착용방법, 제품에 사용된 주요 물질 및 특정 물질에 민감한 피부 반응을 보이는 고객에
+                      대한 유익한 정보를 안내 드립니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  01
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <span class="import">중요!</span>
+                  <a href="#">
+                    <span class="text_short">저희 삼성전자가 올바른 스마트폰 소독 방법을 알려드리겠습니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  23
+                  <span>2021-03</span>
+                </dt>
+                <dd>
+                  <a href="#">
+                    <span class="text_short">저희 삼성전자가 에어컨 사용 지침 안내 및 생활 속 거리두기 에어컨 사용 세부 가이드를 알려드리겠습니다.
+                    </span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="btn_more_let"><span>더보기 +</span></a>
+
+        </div>
+        <div class="customer_tabl_lft">
+          <strong>자료실</strong>
+          <ul>
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  25
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <span class="import">중요!</span>
+                  <a href="#">
+                    <span class="text_short">유럽식 송출방식이 적용된 2013~2016년형 당사 UHD TV를 구매하신 고객님께서는
+                      2017년 5월 31일 개막된 지상파 UHD 방송의 직접 수신을 위해서 별도의 지상파 UHD 수신 키트가 필요합니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  18
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <a href="#">
+                    <span class="text_short">운영 정책상 MirrorLink 서비스에 대한 지원이 중단될 예정으로, 다음과 같이 안내 드리오니 참고하시기 바랍니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  12
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <a href="#">
+                    <span class="text_short">최고의 고객 만족을 위해 올바른 갤럭시 워치/핏 착용방법, 제품에 사용된 주요 물질 및 특정 물질에 민감한 피부 반응을 보이는 고객에
+                      대한 유익한 정보를 안내 드립니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  06
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <a href="#">
+                    <span class="text_short">저희 삼성전자가 올바른 스마트폰 소독 방법을 알려드리겠습니다.</span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+            <li class="tabl_lst">
+              <dl>
+                <dt>
+                  01
+                  <span>2021-04</span>
+                </dt>
+                <dd>
+                  <a href="#">
+                    <span class="text_short">저희 삼성전자가 에어컨 사용 지침 안내 및 생활 속 거리두기 에어컨 사용 세부 가이드를 알려드리겠습니다.
+                    </span>
+                  </a>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <a href="#" class="btn_more"><span>더보기 +</span></a>
+        </div>
+      </section>
+    </div>
+  </article>
+
+  <footer>
+    <div class="foo_wrap">
+      <section class="foo_top">
+        <ul class="foo_top_lst">
+          <li>
+            <h4>삼성 소개</h4>
+            <ul class="foo_top_lst_desc">
+              <li><a href="#">기업소개</a></li>
+              <li><a href="#">CEO인사말</a></li>
+              <li><a href="#">기업비전</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">사회적책임경영</a>
+                <span>-환경경영</span>
+                <span>-윤리경영</span>
+              </li>
+              <li><a href="#">찾아오시는길</a>
+                <span>-본사</span>
+                <span>-지사</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li>
+            <h4>제품</h4>
+            <ul>
+              <li>
+                <ul>
+                  <li><a href="#">스마트폰</a></li>
+                  <li><a href="#">태블릿</a></li>
+                  <li><a href="#">워치</a></li>
+                  <li><a href="#">버즈</a></li>
+                  <li><a href="#">TV</a></li>
+                  <li><a href="#">Lifestyle TV</a></li>
+                  <li><a href="#">BESPOKE</a></li>
+                  <li><a href="#">냉장고</a></li>
+                  <li><a href="#">김치냉장고</a></li>
+                </ul>
+
+                <ul>
+                  <li><a href="#">프린터</a></li>
+                  <li><a href="#">식기세척기</a></li>
+                  <li><a href="#">에어컨</a></li>
+                  <li><a href="#">세탁기</a></li>
+                  <li><a href="#">건조기</a></li>
+                  <li><a href="#">청소기</a></li>
+                  <li><a href="#">공기청정기</a></li>
+                  <li><a href="#">갤럭시북</a></li>
+                  <li><a href="#">오븐/전자레인지</a></li>
+                </ul>
+
+              </li>
+            </ul>
+
+
+          </li>
+
+          <li>
+            <h4>윤리 경영</h4>
+            <ul class="foo_top_lst_desc">
+              <li><a href="#">경영원칙</a></li>
+              <li><a href="#">부정제보</a></li>
+              <li><a href="#">법위반제보</a></li>
+            </ul>
+          </li>
+
+
+
+          <li>
+            <h4>부가정보</h4>
+            <ul class="foo_top_lst_desc">
+              <li><a href="#">데이코</a></li>
+              <li><a href="#">뉴스룸</a></li>
+              <li><a href="#">디자인삼성</a></li>
+              <li><a href="#">삼성전자 사회공헌</a></li>
+              <li><a href="#">협력회사 사이버 신문고</a></li>
+              <li><a href="#">페카트리지 회수신청</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>고객센터</h4>
+            <ul class="foo_top_lst_desc">
+              <li><a href="#">자주하는질문</a>
+                <span>-모바일</span>
+                <span>-PC</span>
+                <span>-모니터</span>
+                <span>-냉장고</span>
+                <span>-TV</span>
+              </li>
+              <li><a href="#">서비스접수</a></li>
+              <li><a href="#">배송</a></li>
+              <li><a href="#">자료실</a></li>
+              <li><a href="#">서비스센터</a></li>
+            </ul>
+          </li>
+
+
+          <li class="foo_sns">
+            <h4>SNS</h4>
+            <ul class="foo_top_lst_desc">
+              <li><i class="fab fa-youtube"></i></li>
+              <li><i class="fab fa-instagram"></i></li>
+              <li><i class="fab fa-facebook"></i></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="foo_bottom">
+        <div class="foo_bottom_wrap">
+          <div class="foo_bottom_img">
+            <img src="https://www.samsung.com/sec/static/_images/common/logo_samsung_black.svg" alt="">
+          </div>
+
+          <div class="foo_bottom_text">
+            <span><a href="#">회사소개</a> • <a href="#">인재채용</a> • <a href="#">이용약관</a> • <a href="#"><span
+                  style="font-weight: 700;">개인정보취급방침</span></a>•<a href="#">이메일수신거부</a></span>
+            <p><i class="fas fa-map-marker-alt"></i>사업장주소 : 경기도 수원시 ㅁㅁ구 ㅁㅁ로 000(ㅁㅁ동) </p>
+            <p><i class="fas fa-phone-alt"></i>대표번호 : 010-8955-9072 </p>
+            <p><i class="fas fa-building"></i>삼성전자 주식회사 대표이사 : 김기남 사업자등록번호 : 124-81-00998 </p>
+            <p>Copyright © 본사이트는 상업적 의도가 없는 포트폴리오입니다.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer>
+
+
+
+
+  <!-- 메인 스크립 -->
+  <script src="asset/js/imagesloaded.pkgd.min.js"></script>
+  <script src="asset/js/charming.min.js"></script>
+  <script src="asset/js/TweenMax.min.js"></script>
+  <script src="asset/js/demo.js"></script>
+
+  <!-- recommended_product 아티클 스와이퍼 js -->
+  <script src="my.js"></script>
+
+  <!-- sns_grid js  -->
+  <script type="text/javascript">
+    // === call function ===
+    window.onload = () => {
+      window.SAL = sal({
+        threshold: 0.0001, // Viewport block percentage
+        once: true, // Animate only the first time or constantly
+        selector: '.item', // Block selector for animation
+        animateClassName: 'item_animate', // Animation class hanging on blocks falling into viewport
+        disabledClassName: 'item_disabled', // Class hanging on body when sal.disable()
+      });
+
+      // Smooth scroll
+      // (scroll element, scroll value, inertia)
+    }
+  </script>
+  <script type="text/javascript" src="asset/js/sal.js"></script>
+  <script type="text/javascript" src="asset/js/direction_box.js"></script>
+</body>
+</body>
+
+</html>
